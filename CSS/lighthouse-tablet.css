@@ -1,13 +1,5 @@
-/* Flexbox - Lighthouse Island Bistro*/
+/* CSS Grid - Lighthouse Island Bistro*/
 /* Tablet */
-
-/* Flex Header */
-#flex-header {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: left;
-}
 
 body.lighthouseislandbistro {
     color: #000000;
@@ -15,8 +7,34 @@ body.lighthouseislandbistro {
     font-family: "Times New Roman", serif;
 }
 
+/* Grid */
+#outerwrapper {
+    display: grid;
+    grid-template-rows: 1fr 0.5fr auto 0.2fr;
+    grid-template-columns: 100%;
+}
+
 .lighthouseislandbistro #outerwrapper {
     background-color: #B3c7e6;
+}
+
+
+/* Header */
+header {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+#headerwrapper {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 0.5fr 3fr;
+}
+
+#lighthouse-header {
+    order: 1;
+    justify-items: start;
+    align-items: center;
 }
 
 .lighthouseislandbistro header {
@@ -31,17 +49,21 @@ body.lighthouseislandbistro {
     letter-spacing: 2px;
 }
 
+
+/* Nav */
 .lighthouseislandbistro nav {
-    /* width: 150px; */
+    margin-top: 10px;
     background-color: #B3c7e6;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
 }
 
-/* Nav Flex */
 .navwrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    column-gap: 1em;
+    display: grid;
+    grid-template-rows: 0.2fr;
+    grid-template-columns: repeat(4, 150px);
+    justify-content: space-evenly;
+    align-content: space-evenly;
 }
 
 .lighthouseislandbistro nav ul {
@@ -59,8 +81,9 @@ body.lighthouseislandbistro {
     color: white;
     display: block;
     padding: 25px;
-    border-bottom: 2px solid white;
+    /* border-bottom: 2px solid white; */
     text-decoration: none;
+    height: 100%;
 }
 
 .lighthouseislandbistro nav a:hover {
@@ -69,17 +92,41 @@ body.lighthouseislandbistro {
 }
 
 
-.lighthouseislandbistro main {
+/* Main section */
+main {
     background-color: white;
     padding: 20px;
     margin-bottom: 0px;
-    overflow: auto;
+    /* overflow: auto; */
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
 }
 
-/* Wrapper for main section flex */
 #mainwrapper {
-    display: flex;
-    flex-direction: row-reverse;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr;
+}
+
+#mainimage {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    justify-self: end;
+    /* Move image to end */
+    order: 1;
+    margin: 20px;
+}
+
+#maintext {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+
+/* Footer */
+footer {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
 }
 
 .lighthouseislandbistro footer {
@@ -89,15 +136,9 @@ body.lighthouseislandbistro {
     margin: 0px;
     border: 0px;
     padding: 5px;
-    clear: both;
+    /* clear: both; */
 }
 
 .lighthouseislandbistro h2 {
     color: #9caaca;
-}
-
-#lighthousemain {
-    /* Move image to end */
-    order: 1;
-    margin: 20px;
 }

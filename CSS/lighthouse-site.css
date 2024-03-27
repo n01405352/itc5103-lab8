@@ -1,0 +1,3 @@
+@import url("lighthouse-desktop.css") screen and (min-width:1025px);
+@import url("lighthouse-tablet.css") screen and (min-width:761px) and (max-width:1024px);
+@import url("lighthouse-mobile.css") screen and (min-width:0px) and (max-width:760px);

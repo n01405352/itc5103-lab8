@@ -1,0 +1,103 @@
+/* Flexbox - Lighthouse Island Bistro*/
+/* Tablet */
+
+/* Flex Header */
+#flex-header {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: left;
+}
+
+body.lighthouseislandbistro {
+    color: #000000;
+    background-color: #00005b;
+    font-family: "Times New Roman", serif;
+}
+
+.lighthouseislandbistro #outerwrapper {
+    background-color: #B3c7e6;
+}
+
+.lighthouseislandbistro header {
+    background-color: #869dc7;
+    font-size: 2em;
+    /* overflow: auto; */
+}
+
+.lighthouseislandbistro header h1 {
+    margin: 30px;
+    text-shadow: 2px 5px 10px black;
+    letter-spacing: 2px;
+}
+
+.lighthouseislandbistro nav {
+    /* width: 150px; */
+    background-color: #B3c7e6;
+}
+
+/* Nav Flex */
+.navwrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1em;
+}
+
+.lighthouseislandbistro nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lighthouseislandbistro nav li {
+    background-color: #e1b5ca;
+    color: white;
+}
+
+.lighthouseislandbistro nav a {
+    color: white;
+    display: block;
+    padding: 25px;
+    border-bottom: 2px solid white;
+    text-decoration: none;
+}
+
+.lighthouseislandbistro nav a:hover {
+    background-color: #eaf7ff;
+    color: #e1b5ca;
+}
+
+
+.lighthouseislandbistro main {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 0px;
+    overflow: auto;
+}
+
+/* Wrapper for main section flex */
+#mainwrapper {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.lighthouseislandbistro footer {
+    background-color: #869dc7;
+    font-size: 0.75em;
+    text-align: center;
+    margin: 0px;
+    border: 0px;
+    padding: 5px;
+    clear: both;
+}
+
+.lighthouseislandbistro h2 {
+    color: #9caaca;
+}
+
+#lighthousemain {
+    /* Move image to end */
+    order: 1;
+    margin: 20px;
+}
